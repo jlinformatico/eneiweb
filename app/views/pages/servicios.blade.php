@@ -25,9 +25,9 @@
                 <img class="img-responsive" src="http://placehold.it/750x450">
             </div>
             <div class="col-md-6">
-                <h2>Laboratorios de Última Generación</h2>
-                <p>This is a great place to introduce your company or project and describe what you do. This about page features general company information, employee bios, and other helpful elements.</p>
-                <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <h2>Beneficios de estudiar en el ENEI</h2>
+                <p>La capacitación que desarrolla la ENEI , asegura la calidad educativa, la cual considera en primer lugar , la eficacia, para lo cual consideramos que los participantes, aprenden aquello que está establecido en los planes y programas curriculares, la segunda es la calidad, que permite que se reciban los conocimientos necesarios, en forma práctica, para lo cual se cuenta con docentes calificados y con experiencia, materiales de estudio, estrategias didácticas, y bases de datos actualizadas.</p>
+                <p>La preparación de los cursos se realiza en coordinación con el personal directamente involucrado en el área a capacitar. Para el diseño se puede tomar como base la programacion de cursos que la ENEI tiene, o puede elaborarse un temario totalmente nuevo que se estructura de acuerdo al plan de desarrollo del personal y el nivel de instrucción de los participantes.</p>
             </div>
 
         </div>
