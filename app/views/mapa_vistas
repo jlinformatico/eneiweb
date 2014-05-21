@@ -1,0 +1,28 @@
+layouts/
+	base
+	slider
+	sidebar
+	secciones/
+		head		
+		header
+		footer
+
+pages/
+	home
+	catalogo
+	servicios
+	contacto
+
+usuarios/
+	panel
+
+admin/
+	panel
+
+aulavirtual/
+	panel
+
+preinscripcion/
+	panel
+
+
