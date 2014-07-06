@@ -24,7 +24,10 @@ class DatabaseSeeder extends Seeder {
 		$this->call('MovimientoTableSeeder');
 		$this->call('TipoNotificacionTableSeeder');
 		$this->call('VisitaTableSeeder');
+		$this->call('DisponibilidadTableSeeder');
+		$this->call('PerfilTableSeeder');
 		$this->call('DetalleVisitaTableSeeder');
+		//notificaciones
 	}
 
 }

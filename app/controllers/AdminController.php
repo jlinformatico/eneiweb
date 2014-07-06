@@ -7,6 +7,111 @@ class AdminController extends BaseController {
 		return View::make('admin.index');
 	}
 
+	//listar todos los modulos
+	public function modulos_all()
+	{
+		$modulos = Modulo::paginate(5);
+		return View::make('admin.modulos.modulos')->with('modulos',$modulos);
+	}
+
+	//crear modulos
+	public function modulos_create()
+	{
+		
+		$rules = array(
+			//'nombre' => 'required',
+			//'Mod' => 'required'
+		);
+
+		$validator = Validator::make(Input::all(), $rules);
+
+		// procesa el registro si no hay errores
+		if ($validator->fails()) {
+			return Redirect::to('modulos')
+				->withErrors($validator);
+
+		} else {
+			// registro de un modulo
+			
+			$modulo= new Modulo;
+				$modulo->ModNombre = Input::get('nombre');
+				$modulo->ModDescripcion = Input::get('descripcion');
+				$modulo->ModDuracion = Input::get('duracion');
+				$modulo->ModPrecio = Input::get('precio');
+				$modulo->ModCertificado = Input::get('certificado');
+				$modulo->ModEstado = 1;
+			$modulo->save();
+
+			// redirect
+			Session::flash('message', 'El módulo ha sido registrado!');
+			return Redirect::to('/modulos');
+		}
+	}
+
+	//editar modulos
+
+	public function modulos_edit($id)
+	{
+		$modulo = Modulo::find($id);
+		return View::make('admin.modulos.editar')->with('modulo', $modulo);
+	}
+
+	public function modulos_update($id)
+	{
+		$input = Input::all();
+
+		$rules = array(
+			'nombre' => 'required',
+			'descripcion' => 'required',
+		);
+
+		$validator = Validator::make($input, $rules);
+
+		if($validator->fails())
+		{
+			return Redirect::back()->withErrors($validator);
+		}
+		else
+		{
+			$modulo= Modulo::find($id);
+				$modulo->ModNombre = Input::get('nombre');
+				$modulo->ModDescripcion = Input::get('descripcion');
+				$modulo->ModDuracion = Input::get('duracion');
+				$modulo->ModPrecio = Input::get('precio');
+				$modulo->ModCertificado = Input::get('certificado');
+				$modulo->ModEstado = 1;
+			$modulo->save();
+
+			return Redirect::to('/modulos');
+		}
+	}
+
+	//eliminar modulos
+
+	//listar todos los cursos
+	public function cursos_all()
+	{
+		$cursos = Curso::paginate(7);
+		$modulocombo = Modulo::all()->lists('ModCertificado','id');
+		return View::make('admin.cursos.cursos')->with('cursos',$cursos)->with('modulocombo',$modulocombo);
+	}
+
+	//crear cursos
+	
+	//editar cursos
+	
+	//eliminar cursos
+	
+	//listar todos los grupos
+	public function grupos_all()
+	{
+		$grupos = Grupo::paginate(7);
+		$modulocombo = Modulo::all()->lists('ModCertificado','id');
+		return View::make('admin.grupos.grupos')->with('grupos',$grupos)->with('modulocombo',$modulocombo);
+	}
+	//crear grupos
+	
+	
 	public function posts_all()
 	{
 		$posts = Post::all();

@@ -23,8 +23,15 @@ Route::get('/login', 'UserController@get_login');
 Route::post('/login', 'UserController@post_login');
 // Esta ruta nos servirá para cerrar sesión.
 Route::get('/logout', 'UserController@logout');
+
 // Panel del administrador.
 Route::get('/paneladmin', 'UserController@panel_admin');
+Route::get('/modulos', 'AdminController@modulos_all');
+Route::post('/modulos', 'AdminController@modulos_create');
+Route::get('/modulos/{id}/edit', 'AdminController@modulos_edit');
+Route::post('/modulos/{id}/edit', 'AdminController@modulos_update');
+Route::get('/cursos', 'AdminController@cursos_all');
+Route::get('/grupos', 'AdminController@grupos_all');
 
 //gestion de usuarios
 Route::get('/usuarios', 'UserController@index');
@@ -39,7 +46,9 @@ Route::get('/usuarios/delete/{id}', 'UserController@destroy');
 Route::get('/preinscritos', 'PreinscritoController@index');
 Route::get('/preinscritos/create', 'PreinscritoController@create');//crear usuario
 Route::post('/preinscritos/create', 'PreinscritoController@store');//procesar la creacion de usuario
-Route::get('/preinscritos/{id}', 'PreinscritoController@show');//Visualizar info del usuario
+Route::get('/preinscritos/{id}', 'PreinscritoController@show');//Visualizar info de la visita del usuario
+Route::post('/preinscritos/{id}', 'PreinscritoController@show_notification');//Visualizar info del usuario
+Route::post('/preinscritos/', 'PreinscritoController@show_modulos');
 Route::get('/preinscritos/{id}/edit', 'PreinscritoController@edit');//Editar usuario
 Route::post('/preinscritos/{id}/edit', 'PreinscritoController@update');//procesar la modificacion
 Route::get('/preinscritos/delete/{id}', 'PreinscritoController@destroy');

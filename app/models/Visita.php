@@ -34,7 +34,7 @@ class Visita extends Eloquent {
 	//En una Visita se realizan muchos Movimientos y viceversa
 	public function visitapreinscripcion()
 	{
-		return $this->belongsToMany('Movimiento','t_detalle_visita','t_visita_id','t_movimiento_id')->withPivot('t_modulo_id', 'DetviDisponibilidad','DetviPerfil');
+		return $this->belongsToMany('Movimiento','t_detalle_visita')->withPivot('t_visita_id','t_movimiento_id');
 	}
 }
 

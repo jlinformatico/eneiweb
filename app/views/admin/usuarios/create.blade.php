@@ -8,7 +8,7 @@
 
             <div class="col-lg-12">
                 <h1 class="page-header">Usuarios del Sistema
-                    <small>Gestión de Permisos</small>
+                    <small>Registrar Usuario</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="{{URL::to('/paneladmin')}}">Panel</a>

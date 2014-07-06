@@ -54,7 +54,7 @@
 				<!-- editar usuario (uses the edit method found at GET /usuarios/{id}/edit -->
 				<a class="btn btn-small btn-info" href="{{ URL::to('usuarios/' . $value->id . '/edit') }}">Editar</a>
 				
-				<a class="btn btn-small btn-info" href="{{ URL::to('usuarios/delete/' . $value->id ) }}">Eliminar</a>
+				<a class="btn btn-danger" href="{{ URL::to('usuarios/delete/' . $value->id ) }}">Eliminar</a>
 			</td>
 		</tr>
 	@endforeach

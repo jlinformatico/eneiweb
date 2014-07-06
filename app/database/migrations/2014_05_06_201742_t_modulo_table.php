@@ -16,11 +16,12 @@ class TModuloTable extends Migration {
 		{
 			$table->increments('id');					
 			$table->string('ModNombre',50)->unique();//
+			$table->string('ModDescripcion');
 			$table->integer('ModDuracion');
 			$table->float('ModPrecio');
 			$table->integer('ModEstado');
 			$table->string('ModCertificado',50);
-				
+
 			$table->timestamps();
 
 		});

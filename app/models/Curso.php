@@ -11,7 +11,7 @@ class Curso extends Eloquent {
 	 * @var array
 	 */
 
-	public function usuariovisita()
+	public function modulo()
 	{
 		return $this->belongsTo('Modulo','t_modulo_id');
 	}
