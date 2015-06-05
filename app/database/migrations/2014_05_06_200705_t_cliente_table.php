@@ -15,10 +15,8 @@ class TClienteTable extends Migration {
 		Schema::create('t_cliente', function($table)
 		{
 			$table->increments('id');					
-			$table->string('PK_Cliente')->unique(); //DNI
-			//$table->integer('t_tipo_usuario_id')->unsigned();
-			//$table->foreign('t_tipo_usuario_id')->references('id')->on('t_tipo_usuario');
-			$table->string('password');
+			//$table->integer('t_tipo_cliente_id')->unsigned();
+			//$table->foreign('t_tipo_cliente_id')->references('id')->on('t_tipo_usuario');
 			$table->integer('t_persona_id')->unsigned();
 			$table->foreign('t_persona_id')->references('id')->on('t_persona');
 			$table->integer('CliEstado');

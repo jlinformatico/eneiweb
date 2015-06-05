@@ -66,6 +66,7 @@ class PreinscritoController extends BaseController {
 			
 			$person= new Persona;
 				$person->PK_Persona = Input::get('dni');
+				$person->password = Hash::make('clientenei'); //Input::get('password')
 				$person->PeNombre = Input::get('nombrepersona');
 				$person->PeApellidoPaterno = Input::get('apellidopaterno');
 				$person->PeApellidoMaterno = Input::get('apellidomaterno');
@@ -74,14 +75,12 @@ class PreinscritoController extends BaseController {
 				$person->PeCelular = Input::get('celular');
 				$person->PeTel = Input::get('telefono');
 				$person->PeEstado = 1;
-				$person->PeFechaNac = 1991-11-03;
 				$person->PeEmail = Input::get('email');
+				$person->PeFechaNac = 1991-11-03;
 			$person->save();
 
 			$cliente= new Cliente;
 				$cliente->t_persona_id=$person->id;
-				$cliente->PK_Cliente=Input::get('dni');
-				$cliente->password = Hash::make('clientenei'); //Input::get('password')
 				$cliente->CliEstado=1;
 			$cliente->save();
 
@@ -110,7 +109,7 @@ class PreinscritoController extends BaseController {
 		}
 	}
 	
-	/**
+/**
 	 * 
 	 */
 

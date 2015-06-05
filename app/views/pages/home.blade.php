@@ -75,15 +75,15 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h2>Especialista en Ofimática</h2>
                     <ul>
-                        <li>Bootstrap 3 Framework</li>
-                        <li>Mobile Responsive Design</li>
-                        <li>Predefined File Paths</li>
-                        <li>Working PHP Contact Page</li>
-                        <li>Minimal Custom CSS Styles</li>
-                        <li>Unstyled: Add Your Own Style and Content!</li>
-                        <li>Font-Awesome fonts come pre-installed!</li>
-                        <li>100% <strong>Free</strong> to Use</li>
-                        <li>Open Source: Use for any project, private or commercial!</li>
+                        <li>Básico Windows</li>
+                        <li>Word</li>
+                        <li>Excel</li>
+                        <li>Power Point</li>
+                        <li>Internet</li>
+                        <li>Access</li>
+                        <li>Publisher</li>
+                        <li>Realizará cualquier <strong>trabajo con documentos digitales</strong> usando word como herramienta profesional</li>
+                        <li>Realizará cualquier cálculo, representar gráficamente datos con Excel!</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -109,15 +109,19 @@
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <h2>Especialista en Excel</h2>
                     <ul>
-                        <li>Bootstrap 3 Framework</li>
-                        <li>Mobile Responsive Design</li>
-                        <li>Predefined File Paths</li>
-                        <li>Working PHP Contact Page</li>
-                        <li>Minimal Custom CSS Styles</li>
-                        <li>Unstyled: Add Your Own Style and Content!</li>
-                        <li>Font-Awesome fonts come pre-installed!</li>
-                        <li>100% <strong>Free</strong> to Use</li>
-                        <li>Open Source: Use for any project, private or commercial!</li>
+                        <li>Conceptos básicos</li>
+                        <li>Funciones de Excel</li>
+                        <li>SUMAR, BUSCAR, PROMEDIO, CONTAR</li>
+                        <li>Proteger libros, hoja crear rangos</li>
+                        <li>Generar gráficos estadísticos</li>
+                        <li>Base de Datos</li>
+                        <li>Creación de Tablas, definir formato de datos</li>
+                        <li>Funciones para base de datos</li>
+                        <li>FILTROS AVANZADOS</li>
+			                        <li>TABLAS DINÁMICAS</li>
+                        <li>CREACIÓN DE MACROS</li>
+                        <li>Funciones <strong>Financieras</strong> TASA, INT.EFECTIVO, VAN, TIR</li>
+                        <li>Soluciones usando la función Solver!</li>
                     </ul>
                 </div>
             </div>

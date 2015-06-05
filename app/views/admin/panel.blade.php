@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<h3>Bienvenid@ al Panel de Administración</h3>
-	<h5>Usuario: {{ Auth::user()->persona->PeNombre.' '.Auth::user()->persona->PeApellidoPaterno.' '.Auth::user()->persona->PeApellidoMaterno; }} - {{ Auth::user()->tipousuarios->TipoUsuNombre; }}</h5>
+	<h5>Usuario: {{ Auth::user()->PeNombre.' '.Auth::user()->PeApellidoPaterno.' '.Auth::user()->PeApellidoMaterno; }} - {{ Auth::user()->usuario->tipousuarios->TipoUsuNombre; }}</h5>
 </div>
 <br>
 <div class="container">

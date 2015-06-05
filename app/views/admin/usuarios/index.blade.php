@@ -40,10 +40,10 @@
 	<tbody>
 	@foreach($users as $value)
 		<tr>
-			<td>{{$value->persona->id}}</td>
+			<td>{{$value->id}}</td>
 			<td>{{$value->persona->PeNombre}}</td>
 			<td>{{$value->tipousuarios->TipoUsuNombre}}</td>
-			<!-- Para ver la publicacion de este usuario {{Publicacion::find($value->id)->PubTitulo}} -->
+
 			<td>{{$value->persona->PeEmail}}</td>
 
 			<!-- we will also add show, edit, and delete buttons -->

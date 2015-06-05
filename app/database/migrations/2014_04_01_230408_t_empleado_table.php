@@ -16,6 +16,7 @@ class TEmpleadoTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('PK_Persona')->unique();// DNI identificador unico
+			$table->string('password'); // contraseña
 			$table->string('PeNombre',50);
 			$table->string('PeApellidoPaterno',50);
 			$table->string('PeApellidoMaterno',50);

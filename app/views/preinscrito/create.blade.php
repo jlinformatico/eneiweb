@@ -57,8 +57,8 @@
 					{{ Form::select('perfilcombo', $perfilcombo, array(1), array('class' => 'form-control')) }}
 				</div>
 				
-				{{ HTML::script('js/jquery.ui.datepicker-es.js') }}
-				<script src="{{ URL::asset('js/jquery.ui.datepicker-es.js') }}"></script>
+				{{ HTML::script('/js/jquery.ui.datepicker-es.js') }}
+				<script src="{{ URL::asset('/js/jquery.ui.datepicker-es.js') }}"></script>
 				<div class="form-group">
 					{{ Form::label('birthday', 'Fecha de Nacimiento') }}
 						<input type="text" class="form-control" name="dateofbirth" id="dateofbirth" placeholder="Pulse aquí" value="{{ Input::old('dateofbirth') }}">
@@ -125,7 +125,7 @@
 			<div class="col-lg-4">
 				{{ Form::submit('Registrar', array('class' => 'btn btn-primary')) }}
 				{{Form::reset('Resetear', array('class'=>'btn btn-default'))}}
-				{{ Form::close() }}
+			{{ Form::close() }}
 			</div>
 		</div>
 	</div>

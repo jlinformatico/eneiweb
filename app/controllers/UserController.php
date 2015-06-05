@@ -43,13 +43,13 @@ class UserController extends BaseController {
 		$Input = Input::all();
 
 		$rules = array(
-			'PK_Usuario' => 'required|exists:Usuario,Username',
+			'PK_Persona' => 'required|exists:Usuario,Username',
 			'password' => 'required',
 		);
 		
 		//Guardamos en un arreglo los datos del usuario.
 		$userdata = array(
-            'PK_Usuario' => Input::get('username'),
+            'PK_Persona' => Input::get('username'),
             'password'=> Input::get('password')
         );
         
@@ -160,7 +160,6 @@ class UserController extends BaseController {
 		return View::make('admin.usuarios.index', array('users'=> $users,'post' => $post));
 		
 		//$query=Usuario::with();
-   
 	}
 	
 	public function create()
@@ -171,29 +170,43 @@ class UserController extends BaseController {
 		return View::make('admin.usuarios.create')->with('tipousuarios', $tipousuarios);
 	}
 	
+	
 	public function store()
 	{
 		// para crear usuarios
 		// read more on validation at http://laravel.com/docs/validation
 		$rules = array(
-			'username'       => 'required',
 			'email'      => 'required|email',
-			'name' => 'required'
+			'password' => 'required'
 		);
 		$validator = Validator::make(Input::all(), $rules);
 
 		// process the login
 		if ($validator->fails()) {
 			return Redirect::to('usuarios/create')
-				->withErrors($validator)
-				->withInput(Input::except('password'));
+				->withErrors($validator);
 		} else {
-			// store
-			$user = new Usuario;
-			$user->username = Input::get('username');
-			$user->email = Input::get('email');
-			$user->name = Input::get('name');
-			$user->save();
+			// procesar registro de nuevo usuario
+			$person= new Persona;
+				$person->PK_Persona = Input::get('dni');
+				$person->password = Hash::make(Input::get('password'));
+				$person->PeNombre = Input::get('nombrepersona');
+				$person->PeApellidoPaterno = Input::get('apellidopaterno');
+				$person->PeApellidoMaterno = Input::get('apellidomaterno');
+				$person->PeSexo = Input::get('sexo');;
+				$person->PeDireccion = Input::get('direccion');
+				$person->PeCelular = Input::get('celular');
+				$person->PeTel = Input::get('telefono');
+				$person->PeEstado = 1;
+				$person->PeFechaNac = 1991-11-03;
+				$person->PeEmail = Input::get('email');
+			$person->save();
+
+			$usuario= new Usuario;
+				$usuario->t_persona_id=$person->id;
+				$usuario->t_tipo_usuario_id=Input::get('tipousuarios');
+				$usuario->UsuEstado=1;
+			$usuario->save();
 
 			// redirect
 			Session::flash('message', 'Usuario ha sido registrado!');

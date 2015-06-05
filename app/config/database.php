@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'syseneiweb',
+			'database'  => 'eneiweb2014',
 			'username'  => 'root',
 			'password'  => 'basadrinux',
 			'charset'   => 'utf8',

@@ -18,6 +18,10 @@
                 </ol>
             </div>
 		</div>
+		
+	@if (Session::has('message'))
+	<div class="alert alert-info">{{ Session::get('message') }}</div>
+	@endif
 
 <!-- if there are creation errors, they will show here -->
 	{{ HTML::ul($errors->all() )}}

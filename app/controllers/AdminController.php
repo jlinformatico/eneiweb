@@ -82,11 +82,13 @@ class AdminController extends BaseController {
 				$modulo->ModEstado = 1;
 			$modulo->save();
 
+			Session::flash('message', 'El módulo ha sido modificado!');
 			return Redirect::to('/modulos');
 		}
 	}
 
 	//eliminar modulos
+
 
 	//listar todos los cursos
 	public function cursos_all()
